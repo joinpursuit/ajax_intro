@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (xhr.status === 200) {
           let dogObj = JSON.parse(xhr.response);
           let result = dogObj.message;
-          let img = document.createElement("img");
-          xhr.open("get", "https://dog.ceo/api/breeds/image/random", true);
-          xhr.send();
+          let img = document.querySelector(".img");
+          img.src = result;
+          //  console.log(dogObj);
         }
       }
     };
+    xhr.open("get", "https://dog.ceo/api/breeds/image/random", true);
+    xhr.send();
   });
 });
