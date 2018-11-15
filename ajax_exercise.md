@@ -1,4 +1,4 @@
-# Dog Pictures
+<!-- # Dog Pictures
 
 Alright! It's time to employ our friend the [Dog API](https://dog.ceo/dog-api/) again. However, we aren't going to grab data manually from it anymore - we're going to use `XMLHttpRequest` to get it each time the user asks.
 
@@ -8,7 +8,7 @@ Also, we aren't just going to grab random dog breeds. We're going to grab random
 
 Create an HTML file and a JavaScript file. In your HTML file, create a `button` element and import your JavaScript.
 
-In your JavaScript, create an event listener on the button. For now, let's just have our button log `"Clicked!"` to the console.
+In your JavaScript, create an event listener on the button. For now, let's just have our button log `"Clicked!"` to the console. -->
 
 Now, let's make a function called `getRandomImage`. This function should use `XMLHttpRequest` to make an AJAX GET request to the random image route (https://dog.ceo/api/breeds/image/random) of the Dog API. Get the response object and return it.
 
