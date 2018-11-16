@@ -12,36 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let result;
     let dogName = document.createElement('h1');
+    let imgNode = document.createElement('img');
 
     xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          result = JSON.parse(xhr.response).message;
-          let resultCopy = result.split('/');
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        result = JSON.parse(xhr.response).message;
+        let resultCopy = result.split('/');
 
-          if (document.querySelector('img')) {
-            document.querySelector('img').remove();
-          }
+        body.appendChild(imgNode);
 
-          let imgNode = document.createElement('img');
-          body.appendChild(imgNode);
+        dogName.innerText = resultCopy[4];
+        body.appendChild(dogName);
 
-          dogName.innerText = resultCopy[4];
-          body.appendChild(dogName);
-
-          imgNode = document.querySelector('img').setAttribute('src', result);
-
-
-        } else {
-          console.log('DID NOT GET A 200 OK Status :( ');
-        }
+        imgNode.setAttribute('src', result);
       }
     }
 
   button.addEventListener('click', () => {
     getRandomImage();
-
-
   });
-
 })
