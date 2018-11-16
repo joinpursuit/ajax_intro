@@ -1,4 +1,5 @@
 let pokeResults = [];
+let active = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   let xhr = new XMLHttpRequest();
@@ -13,10 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   };
+
   let button = document.querySelector('button');
   button.addEventListener('click', () => {
-    let li = document.querySelector('li');
-    return !li ? addPokemon() : clearAddPokemon();
+    if (active) {
+      return;
+    } else {
+      active = true;
+      let li = document.querySelector('li');
+      return !li ? addPokemon() : clearAddPokemon();
+    }
   });
   xhr.open('get', 'https://pokeapi.co/api/v2/pokemon/', true);
   xhr.send();
@@ -27,7 +34,7 @@ const addPokemon = () => {
   getURL(randomPokemon);
 };
 
-const getURL = (pokemon)=> {
+const getURL = (pokemon) => {
   let url = pokemon.url;
 
   let pxhr = new XMLHttpRequest();
@@ -39,12 +46,13 @@ const getURL = (pokemon)=> {
       }
     }
   };
-
+  console.log(pokemon);
+console.log(url);
   pxhr.open('get', url, true);
   pxhr.send();
 };
 
-const createLiAddPokemon = (name, sprites)=> {
+const createLiAddPokemon = (name, sprites) => {
   let ul = document.querySelector('.pokemon');
   let li = document.createElement('li');
   let p = document.createElement('p');
@@ -63,12 +71,13 @@ const createLiAddPokemon = (name, sprites)=> {
   }
 
   ul.appendChild(li);
+  active = false;
 };
 
 const clearAddPokemon = () => {
   let li = document.querySelector('li');
   li.parentNode.removeChild(li);
-  //   li.remove();
+  //=== li.remove();
   let randomPokemon = getRandomIndex(pokeResults);
   getURL(randomPokemon);
 };
