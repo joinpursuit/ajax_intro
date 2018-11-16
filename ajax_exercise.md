@@ -4,6 +4,13 @@ Alright! It's time to employ our friend the [Dog API](https://dog.ceo/dog-api/) 
 
 Also, we aren't just going to grab random dog breeds. We're going to grab random dog images and present them to the user! What a therapeutic little app.
 
+*/*
+Mine:
+after: https://dog.ceo/dog-api/
+click "documentation"
+Re: https://dog.ceo/api/breeds/list/all
+
+
 ## Step 1
 
 Create an HTML file and a JavaScript file. In your HTML file, create a `button` element and import your JavaScript.
