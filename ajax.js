@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-//
+
 let image = document.createElement("img")
 
   let dog = new XMLHttpRequest()
@@ -27,7 +27,7 @@ let image = document.createElement("img")
   let button = document.getElementById('button')
   button.addEventListener("click", () => {
 
-    console.log("clicked")
+    // console.log("clicked")
 
     getRandomImage();
 
