@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
           let result = dogObj.message;
           let img = document.querySelector(".img");
           img.src = result;
-          //  console.log(dogObj);
+          console.log(dogObj);
         }
       }
     };
