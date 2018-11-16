@@ -1,34 +1,29 @@
-document.addEventListener("DOMContentLoaded", () =>{
-  let button = document.querySelector(".button")
-  button.addEventListener("click", (event) =>{
+let clicker = document;
+clicker.addEventListener('DOMContentLoaded', () => {
+let button = clicker.querySelector(".button")
+let img = clicker.createElement("img");
 
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
+button.addEventListener('click', () => {
+  const getRandomImage = ()=>{
+    xhr.open("get", "https://dog.ceo/api/breed/hound/images/random", true)
+    xhr.send()
 
-getRandomImage
+  }
+  getRandomImage();
+  console.log("clicked!");
 
-// })
+  });
 
-xhr.open("get", "https://pokeapi.co/api/v2/pokemon/")
-xhr.send()
-}
+let xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState === 4){
+      if(xhr.status === 200){
+        let dogArray = JSON.parse(xhr.response)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// xhr.open("get", "https://dog.ceo/api/breeds/list/all")
-// xhr.send()
-//
-// // })
+        img.src = dogArray.message
+        clicker.body.appendChild(img)
+        console.log(dogArray);
+      }
+    }
+  }
+})
