@@ -1,0 +1,17 @@
+
+body{
+   background-image: linear-gradient(-90deg, #e5d4b9, #928878);
+  text-align: center;
+  font-family: "Josefin Slab";
+}
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
