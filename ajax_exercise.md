@@ -27,6 +27,8 @@ So, our button now triggers an AJAX request. However, it doesn't access our DOM 
 
 Keying into the DOM node at the key of `src`, we can add a `src` to our `img` tag. Assign the `src` of our DOM node to the image URL we get from our AJAX request. Then, append our `img` to the end of our HTML `body`.
 
+//https://www.youtube.com/watch?v=NN3OTX-cevQ
+
 Click the button. You should see a random dog image appear. Yay!
 
 ## Step 3

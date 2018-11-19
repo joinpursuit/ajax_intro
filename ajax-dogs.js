@@ -4,37 +4,48 @@ document.addEventListener("DOMContentLoaded", () => {
   let body = document.querySelector("body");
   let image = document.createElement("img");
   let dogObj;
-  console.log(image);
-  console.log(image.src);
-  // let imgsrc = document.createElement("image.src")
-  // imgsrc = dogObj.message;
-  // console.log(imgsrc);
-  // image.appendChild(imgsrc);
+  // let dogObj("message");
+  image.setAttribute("src", "https://images.dog.ceo/breeds/corgi-cardigan/n02113186_13256.jpg");
+  // console.log("here", image.src);
+  let src = image.getAttribute("src")
+  console.log(src);
+
+  // let imgsrc = dogObj.message;
+  body.appendChild(image);
+  // console.log(image.src);
+  // console.log(src);
 
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         dogObj = JSON.parse(xhr.response);
-        body.appendChild(img)
+        body.appendChild(image)
       }
     }
-    console.log(dogObj);
+    console.log("dogObj", dogObj);
+    console.log("dogObj.message", dogObj.message);
   }
 
 
-  function getRandomImage () { // console.log("hello, You");
+  function getRandomImage () {
     xhr.open("get", "https://dog.ceo/api/breeds/image/random", true)
     xhr.send()
-
-    // console.log("hello");
   }
 
 
   button.addEventListener("click", (event) => {
-    // console.log("Clicked!");
-    getRandomImage()
-    // console.log(getRandomImage());
+    if (dogObj.message) {
+      getRandomImage()
+      // console.log("variable", xhr.onreadystatechange);
+      // // console.log(dogObj.message);
+      document.querySelector("src").replaceChild(src, src)
+      // image.parentNode.replaceChilde(image, dogObj.message)
+      // image.src = dogObj.message
+
+    }
+
+
   })
 
 
