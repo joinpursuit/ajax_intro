@@ -35,6 +35,8 @@ Click the button. You should see a random dog image appear. Yay!
 
 Now that we've got one random dog image, we may want another. However, we don't want to append another image to the bottom of our page - we want to replace the existing image with a new one. Add a condition to your event listener to replace the image if it already exists (hint: while it isn't the only way to do it, the `replaceChild` method may prove useful here).
 
+//https://www.w3schools.com/jsref/met_node_replacechild.asp
+
 Awesome. We've built out the core functionality of our Random Dog Image app. Style it to your liking.
 
 ## Bonus
