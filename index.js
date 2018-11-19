@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let result;
-    let dogName = document.createElement('h1');
+    let dogName = document.createElement('h2');
     let imgNode = document.createElement('img');
 
     xhr.onreadystatechange = function () {
