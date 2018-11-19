@@ -1,0 +1,20 @@
+.clickit{
+  margin: 37px;
+  margin-left: 47%;
+  margin-top: 19%;
+  color: white;
+  background-color: lightblue;
+  font-size: 20px
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  margin-left: 32%;
+}
+
+body{
+background-color: tan;
+}
