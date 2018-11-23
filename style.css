@@ -1,0 +1,11 @@
+button {
+  padding: 30px;
+  font-size: 20px;
+  background-color: blue;
+  color: white;
+  margin-left: 40%;
+  margin-bottom: 40px;
+}
+ .showImg {
+   margin-left: 30%;
+ }
