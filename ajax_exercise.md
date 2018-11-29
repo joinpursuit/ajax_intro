@@ -4,6 +4,13 @@ Alright! It's time to employ our friend the [Dog API](https://dog.ceo/dog-api/) 
 
 Also, we aren't just going to grab random dog breeds. We're going to grab random dog images and present them to the user! What a therapeutic little app.
 
+*/*
+Mine:
+after: https://dog.ceo/dog-api/
+click "documentation"
+Re: https://dog.ceo/api/breeds/list/all
+
+
 ## Step 1
 
 Create an HTML file and a JavaScript file. In your HTML file, create a `button` element and import your JavaScript.
@@ -20,11 +27,15 @@ So, our button now triggers an AJAX request. However, it doesn't access our DOM 
 
 Keying into the DOM node at the key of `src`, we can add a `src` to our `img` tag. Assign the `src` of our DOM node to the image URL we get from our AJAX request. Then, append our `img` to the end of our HTML `body`.
 
+//https://www.youtube.com/watch?v=NN3OTX-cevQ
+
 Click the button. You should see a random dog image appear. Yay!
 
 ## Step 3
 
 Now that we've got one random dog image, we may want another. However, we don't want to append another image to the bottom of our page - we want to replace the existing image with a new one. Add a condition to your event listener to replace the image if it already exists (hint: while it isn't the only way to do it, the `replaceChild` method may prove useful here).
+
+//https://www.w3schools.com/jsref/met_node_replacechild.asp
 
 Awesome. We've built out the core functionality of our Random Dog Image app. Style it to your liking.
 
